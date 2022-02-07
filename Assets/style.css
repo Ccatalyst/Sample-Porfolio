@@ -46,36 +46,38 @@ aside div {
 	border: 1px solid white;
 }
 
-main {
-	display: flex;
-	background-color: grey;
-	border: 1px dashed white;
-	flex-direction: column;
-	flex-wrap: wrap;
-}
 section {
 	display: flex;
 	flex-direction: column;
 	flex-wrap: wrap;
+	background-color: grey;
+	border: 1px dashed white;
 }
 section div {
 	border: 1px solid white;
 }
-
-.content {
+aside {
+	flex: 1 0;
+	/* TODO: at 768 px and above, change border-bottom to border-right */
+	border-bottom: 4px solid blue;
+	border-bottom-width: 10px;
+	margin: 5%;
+}
+aside h2 {
+	/* TODO: at 768 px and above, changes to text-align: right; */
+	text-align: center;
+}
+article {
+	flex: 3 0;
+	padding: 10% 5%;
+}
+.mainContainer {
 	display: flex;
-	flex-direction: row;
+	/* TODO: change flex direction to row when at 768px or higher */
+	flex-direction: column;
 	flex-wrap: wrap;
-	justify-content: space-around;
 }
-.card {
-	flex: 1 1 100px;
-	max-width: 150px;
-}
-#largeCard {
-	flex: 2 1 100px;
-	max-width: 300px;
-}
+
 footer {
 	display: block;
 	background-color: grey;
