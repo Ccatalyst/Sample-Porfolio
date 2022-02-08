@@ -18,7 +18,9 @@
 			<a href="">About Me</a>
 		</nav>
 		<div class="banner">
-			<h1>Title Here</h1>
+			<div class="bannerText">
+				<h1>Title Here</h1>
+			</div>
 		</div>
 		<main>
 			<section class="mainContainer">
@@ -35,7 +37,7 @@
 				</article>
 			</section>
 			<!-- Container for all of the work section of the main content  -->
-			<section class="mainContainer">
+			<section class="mainContainer" id="work">
 				<!-- The organization title for the section -->
 				<aside>
 					<h2>Work</h2>
@@ -43,22 +45,82 @@
 				<!-- The container holding the cards-->
 				<div class="workContainer">
 					<!-- The large card with id largeCard -->
-					<div class="workCard" id="largeCard">
+					<div id="largeCard">
+						<!-- the image link, with title card overlaying the picture -->
 						<a href="www.google.com"
 							><img
 								src="./Assets/daniel-abadia-Njq3Nz6-5rQ-unsplash.jpg"
 								alt="a picture of a train"
 						/></a>
-						<h3>Sample Text</h3>
-						<p>Lorem ipsum dolor sit.</p>
+						<div class="pictureText">
+							<h3>Sample Text</h3>
+							<p>Lorem ipsum dolor sit.</p>
+						</div>
+					</div>
+					<!-- The container with the four smaller cards in them -->
+					<div class="smallCard">
+						<!-- a flexbox containing two of the four small cards, to prevent three cards in a row -->
+						<div class="smallCardRow">
+							<div class="workCard">
+								<!-- the image link, with title card overlaying the picture -->
+								<a href="www.google.com"
+									><img
+										src="./Assets/daniel-abadia-Njq3Nz6-5rQ-unsplash.jpg"
+										alt="a picture of a train"
+								/></a>
+								<div class="pictureText">
+									<h3>Sample Text</h3>
+									<p>Lorem ipsum dolor sit.</p>
+								</div>
+							</div>
+							<div class="workCard">
+								<!-- the image link, with title card overlaying the picture -->
+								<a href="www.google.com"
+									><img
+										src="./Assets/daniel-abadia-Njq3Nz6-5rQ-unsplash.jpg"
+										alt="a picture of a train"
+								/></a>
+								<div class="pictureText">
+									<h3>Sample Text</h3>
+									<p>Lorem ipsum dolor sit.</p>
+								</div>
+							</div>
+						</div>
+						<!-- a flexbox containing two of the four small cards, to prevent three cards in a row -->
+						<div class="smallCardRow">
+							<div class="workCard">
+								<!-- the image link, with title card overlaying the picture -->
+								<a href="www.google.com"
+									><img
+										src="./Assets/daniel-abadia-Njq3Nz6-5rQ-unsplash.jpg"
+										alt="a picture of a train"
+								/></a>
+								<div class="pictureText">
+									<h3>Sample Text</h3>
+									<p>Lorem ipsum dolor sit.</p>
+								</div>
+							</div>
+							<div class="workCard">
+								<!-- the image link, with title card overlaying the picture -->
+								<a href="www.google.com"
+									><img
+										src="./Assets/daniel-abadia-Njq3Nz6-5rQ-unsplash.jpg"
+										alt="a picture of a train"
+								/></a>
+								<div class="pictureText">
+									<h3>Sample Text</h3>
+									<p>Lorem ipsum dolor sit.</p>
+								</div>
+							</div>
+						</div>
 					</div>
 				</div>
 			</section>
-			<section class="mainContainer">
+			<section class="mainContainer" id="contactMe">
 				<aside>
 					<h2>Contact Me</h2>
 				</aside>
-				<div></div>
+				<div class="Contact"></div>
 			</section>
 		</main>
 		<footer>
