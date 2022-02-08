@@ -1,11 +1,15 @@
-/* :root{
-    --border( )
-    --font( )
-} */
+:root {
+	--font: #0b4f6c;
+	--border: #61a0af;
+	--fontAlt: #e1d9cb;
+	--background: #c8eaf9;
+	--accent: #041b25;
+}
 * {
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
+	color: var(--font);
 }
 html {
 	height: 100vh;
@@ -13,48 +17,72 @@ html {
 }
 body {
 	margin: 0;
+	background-color: var(--background);
 }
 header {
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
 	height: 60px;
-	background-color: black;
+	background-color: var(--fontAlt);
 }
 header h1 {
 	flex: 1 1 60px;
-	background-color: aqua;
+	background-color: var(--border);
+	color: var(--accent);
+	text-shadow: var(--font) 1px 0 2px;
 	text-align: center;
+	text-transform: uppercase;
 }
 
 nav {
-	background-color: darkblue;
+	background-color: var(--accent);
 	display: flex;
+	/* TODO: change flex direction to row at 768px width */
 	flex-direction: column;
-	padding: 0;
-	margin: 0;
+	padding: 0px;
+	margin: 0px;
 }
 
 nav a {
-	border: 1px solid white;
+	background-color: var(--accent);
+	border: 2px solid var(--font);
 	text-decoration: none;
-	color: teal;
+	color: var(--fontAlt);
+	font-weight: bolder;
+	text-shadow: var(--font) 1px 0 2px;
+	padding: 5px;
+	margin: 2px 0px;
 	text-align: center;
 }
 
-main {
-	background-color: grey;
+.banner {
+	display: flex;
+	flex-direction: row;
+	position: relative;
+	background-image: url(./jeremy-bishop-G9i_plbfDgk-unsplash.jpg);
+	background-size: cover;
+	background-position: center;
+	min-height: 200px;
+	justify-content: end;
+	align-items: flex-end;
 }
 
-section {
-	border: 1px dashed white;
+.bannerText {
+	position: absolute;
+	background-color: var(--border);
+	bottom: 10%;
+	right: 10%;
+	padding: 4px 6px;
+}
+.bannerText h1 {
+	color: var(--accent);
 }
 
 aside {
 	flex: 1 0;
 	/* TODO: at 768 px and above, change border-bottom to border-right */
-	border-bottom: 4px solid blue;
-	border-bottom-width: 10px;
+	border-bottom: 2px solid var(--font);
 	margin: 5%;
 }
 aside h2 {
@@ -71,10 +99,12 @@ article {
 	flex-direction: column;
 	flex-wrap: wrap;
 }
+/* container that holds the small cards inside the workContainer class */
 .smallCard {
 	display: flex;
 	flex-flow: row wrap;
 }
+/* class for rows that hold two smaller cards each. Inside smallCard class*/
 .smallCardRow {
 	display: flex;
 	flex-flow: row nowrap;
@@ -83,54 +113,51 @@ article {
 .workCard {
 	width: 50%;
 	position: relative;
-	border: 2px dashed aqua;
+	margin: 2%;
 }
-
+/* fits the image inside the workCard class to fill the width of the container and give the image a border */
 .workCard img {
 	width: 100%;
 	height: auto;
-	border: 4px solid aqua;
+	border: 4px solid var(--font);
 }
+/* The text on top of each image link */
 .pictureText {
 	position: absolute;
 	top: 20px;
-	background-color: aqua;
+	background-color: var(--border);
 	padding-left: 20px;
 	padding-right: 20px;
+	pointer-events: none;
 }
 
 #largeCard {
 	flex: 2 1;
 	position: relative;
-	border: 4px dashed aqua;
+	margin: 4%;
 }
 #largeCard img {
 	width: 100%;
-	border: 4px solid aqua;
+	border: 4px solid var(--border);
+}
+.contact {
+	display: flex;
+	flex-flow: row wrap;
+}
+.contact ul {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-evenly;
+	list-style: none;
+}
+.contact li {
+	display: block;
+	padding: 5%;
 }
 footer {
+	visibility: hidden;
 	display: block;
-	background-color: grey;
 	border: 1px dashed white;
-}
-
-.banner {
-	display: flex;
-	flex-direction: row;
-	position: relative;
-	background-image: url(./keith-misner-h0Vxgz5tyXA-unsplash.jpg);
-	background-size: cover;
-	background-position: center;
-	min-height: 200px;
-	justify-content: end;
-	align-items: flex-end;
-}
-.bannerText {
-	position: absolute;
-	background-color: aqua;
-	bottom: 10%;
-	right: 10%;
-	padding: 4px 6px;
 }
 
 @media screen and (min-width: 992px) {
