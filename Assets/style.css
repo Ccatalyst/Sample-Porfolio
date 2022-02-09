@@ -90,7 +90,6 @@ main {
 	display: block;
 }
 aside {
-	flex: 1 0;
 	margin-bottom: 5%;
 }
 aside h2 {
@@ -107,14 +106,20 @@ article {
 	flex-direction: column;
 	flex-wrap: wrap;
 }
+.aside {
+	display: flex;
+	flex-flow: row wrap;
+	flex: 0 0 30%;
+	border-bottom: 2px solid var(--font);
+	margin-bottom: 1%;
+	justify-content: center;
+}
 .workContainer {
 	display: flex;
 	flex-flow: column wrap;
 	max-width: 100%;
 }
-.cardContainer {
-	flex: 0 0 90%;
-}
+
 /* container that holds the small cards inside the workContainer class */
 .smallCard {
 	flex: 1 1;
@@ -131,6 +136,12 @@ article {
 	width: 50%;
 	position: relative;
 	margin: 2%;
+	-webkit-filter: none;
+	filter: none;
+}
+.workCard:hover {
+	-webkit-filter: opacity(0%);
+	filter: opacity(90%);
 }
 /* fits the image inside the workCard class to fill the width of the container and give the image a border */
 .workCard img {
@@ -168,14 +179,18 @@ article {
 	flex: 2 1;
 	position: relative;
 	margin: 4%;
+	-webkit-filter: none;
+	filter: none;
+}
+#largeCard:hover {
+	-webkit-filter: opacity(0%);
+	filter: opacity(90%);
 }
 #largeCard img {
 	width: 100%;
 	border: 4px solid var(--font);
 }
-#largeCard img:hover {
-	background-color: var(--fontAlt);
-}
+
 .contact {
 	display: flex;
 	flex-flow: row wrap;
@@ -200,10 +215,6 @@ footer {
 	display: block;
 	border: 1px dashed white;
 }
-.aside {
-	border-bottom: 2px solid var(--font);
-	margin-bottom: 1%;
-}
 
 @media screen and (min-width: 768px) {
 	nav {
@@ -217,17 +228,23 @@ footer {
 	.mainContainer {
 		flex-flow: row wrap;
 	}
-
+	.cardContainer {
+		flex: 0 0 80%;
+	}
 	article {
 		width: 80%;
 	}
 	aside h2 {
 		text-align: right;
+		margin-right: 1em;
 	}
 	.aside {
 		border-bottom: none;
+		border-right: 2px solid var(--font);
 		text-align: right;
-		margin: 3%;
+		margin: 2em;
+		justify-content: right;
+		flex: 0 0 10%;
 	}
 	header h1 {
 		font-size: 3.5em;
